@@ -4,6 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.async
+import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharedFlow
@@ -54,16 +55,20 @@ class FoodViewModel : ViewModel() {
         viewModelScope.launch {
             _refreshing.value = true
             try {
-                val items = async { api.items() }
-                val shop = async { api.shopping() }
-                val names = async { runCatching { api.names() }.getOrNull() }
-                val recipes = async { runCatching { api.recipes() }.getOrNull() }
-                val catalog = async { if (_catalog.value.isEmpty()) runCatching { api.catalog() }.getOrNull() else null }
-                _items.value = items.await()
-                _shop.value = shop.await()
-                names.await()?.let { _names.value = it }
-                recipes.await()?.let { _recipes.value = it }
-                catalog.await()?.let { _catalog.value = it }
+                // coroutineScope: a failed request (e.g. offline) is rethrown here and caught below,
+                // instead of also travelling up to viewModelScope, where it would crash the app.
+                coroutineScope {
+                    val items = async { api.items() }
+                    val shop = async { api.shopping() }
+                    val names = async { runCatching { api.names() }.getOrNull() }
+                    val recipes = async { runCatching { api.recipes() }.getOrNull() }
+                    val catalog = async { if (_catalog.value.isEmpty()) runCatching { api.catalog() }.getOrNull() else null }
+                    _items.value = items.await()
+                    _shop.value = shop.await()
+                    names.await()?.let { _names.value = it }
+                    recipes.await()?.let { _recipes.value = it }
+                    catalog.await()?.let { _catalog.value = it }
+                }
                 _error.value = null
             } catch (e: CancellationException) {
                 throw e
