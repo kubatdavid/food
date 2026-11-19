@@ -95,3 +95,4 @@ jobs:
           name: Spíž 1.0.${{ github.run_number }}
           body: "Built from ${{ github.sha }} by GitHub Actions. Install or update with Obtainium, or download the APK below."
           files: ${{ steps.apk.outputs.file }}
+          make_latest: true
