@@ -1766,6 +1766,79 @@
    "common": 1,
    "size": 1.0,
    "aka": []
+  },
+  {
+   "cs": "Červené fazole v plechovce",
+   "en": "Canned red kidney beans",
+   "unit": "g",
+   "category": "Pantry",
+   "common": 2,
+   "size": 250,
+   "aka": [
+    "červené fazole",
+    "fazole konzerva",
+    "kidney fazole"
+   ]
+  },
+  {
+   "cs": "Slunečnicová semínka pražená solená",
+   "en": "Roasted salted sunflower seeds",
+   "unit": "g",
+   "category": "Pantry",
+   "common": 1,
+   "size": 200,
+   "aka": [
+    "slunečnicová semínka",
+    "slunečnice"
+   ]
+  },
+  {
+   "cs": "Dýňová semínka pražená solená",
+   "en": "Roasted salted pumpkin seeds",
+   "unit": "g",
+   "category": "Pantry",
+   "common": 1,
+   "size": 200,
+   "aka": [
+    "dýňová semínka",
+    "tykvová semínka"
+   ]
+  },
+  {
+   "cs": "Mandlové plátky",
+   "en": "Flaked almonds",
+   "unit": "g",
+   "category": "Pantry",
+   "common": 1,
+   "size": 100,
+   "aka": [
+    "mandle plátky",
+    "plátkové mandle"
+   ]
+  },
+  {
+   "cs": "Konopné semínko loupané",
+   "en": "Hulled hemp seeds",
+   "unit": "g",
+   "category": "Pantry",
+   "common": 1,
+   "size": 200,
+   "aka": [
+    "konopná semínka",
+    "konopí"
+   ]
+  },
+  {
+   "cs": "Nugátová čokoláda",
+   "en": "Nougat chocolate",
+   "unit": "g",
+   "category": "Pantry",
+   "common": 1,
+   "size": 100,
+   "aka": [
+    "čokoláda nugátová",
+    "mléčná čokoláda"
+   ]
   }
  ]
 }
