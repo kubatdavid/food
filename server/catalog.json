@@ -1,0 +1,1771 @@
+{
+ "version": 1,
+ "ingredients": [
+  {
+   "cs": "Máslo",
+   "en": "Butter",
+   "unit": "g",
+   "category": "Fridge",
+   "common": 3,
+   "size": 250.0,
+   "aka": []
+  },
+  {
+   "cs": "Vejce",
+   "en": "Eggs",
+   "unit": "pcs",
+   "category": "Fridge",
+   "common": 3,
+   "size": 10.0,
+   "aka": []
+  },
+  {
+   "cs": "Mléko",
+   "en": "Milk",
+   "unit": "ml",
+   "category": "Fridge",
+   "common": 3,
+   "size": 1000.0,
+   "aka": []
+  },
+  {
+   "cs": "Smetana ke šlehání 33 %",
+   "en": "Whipping cream 33%",
+   "unit": "ml",
+   "category": "Fridge",
+   "common": 3,
+   "size": 250.0,
+   "aka": []
+  },
+  {
+   "cs": "Smetana na vaření",
+   "en": "Cooking cream",
+   "unit": "ml",
+   "category": "Fridge",
+   "common": 2,
+   "size": 250.0,
+   "aka": []
+  },
+  {
+   "cs": "Zakysaná smetana",
+   "en": "Sour cream",
+   "unit": "g",
+   "category": "Fridge",
+   "common": 2,
+   "size": 200.0,
+   "aka": []
+  },
+  {
+   "cs": "Bílý jogurt",
+   "en": "Plain yogurt",
+   "unit": "g",
+   "category": "Fridge",
+   "common": 2,
+   "size": 150.0,
+   "aka": []
+  },
+  {
+   "cs": "Tvaroh",
+   "en": "Quark",
+   "unit": "g",
+   "category": "Fridge",
+   "common": 2,
+   "size": 250.0,
+   "aka": []
+  },
+  {
+   "cs": "Čerstvý sýr",
+   "en": "Cream cheese",
+   "unit": "g",
+   "category": "Fridge",
+   "common": 1,
+   "size": 150.0,
+   "aka": []
+  },
+  {
+   "cs": "Mascarpone",
+   "en": "Mascarpone",
+   "unit": "g",
+   "category": "Fridge",
+   "common": 1,
+   "size": 250.0,
+   "aka": []
+  },
+  {
+   "cs": "Eidam",
+   "en": "Edam cheese",
+   "unit": "g",
+   "category": "Fridge",
+   "common": 2,
+   "size": 100.0,
+   "aka": []
+  },
+  {
+   "cs": "Gouda",
+   "en": "Gouda",
+   "unit": "g",
+   "category": "Fridge",
+   "common": 1,
+   "size": 100.0,
+   "aka": []
+  },
+  {
+   "cs": "Čedar",
+   "en": "Cheddar",
+   "unit": "g",
+   "category": "Fridge",
+   "common": 1,
+   "size": 200.0,
+   "aka": []
+  },
+  {
+   "cs": "Parmazán",
+   "en": "Parmesan",
+   "unit": "g",
+   "category": "Fridge",
+   "common": 2,
+   "size": 100.0,
+   "aka": []
+  },
+  {
+   "cs": "Mozzarella",
+   "en": "Mozzarella",
+   "unit": "g",
+   "category": "Fridge",
+   "common": 2,
+   "size": 125.0,
+   "aka": []
+  },
+  {
+   "cs": "Feta",
+   "en": "Feta",
+   "unit": "g",
+   "category": "Fridge",
+   "common": 1,
+   "size": 200.0,
+   "aka": []
+  },
+  {
+   "cs": "Šunka",
+   "en": "Ham",
+   "unit": "g",
+   "category": "Fridge",
+   "common": 2,
+   "size": 100.0,
+   "aka": []
+  },
+  {
+   "cs": "Slanina",
+   "en": "Bacon",
+   "unit": "g",
+   "category": "Fridge",
+   "common": 2,
+   "size": 100.0,
+   "aka": []
+  },
+  {
+   "cs": "Kuřecí prsa",
+   "en": "Chicken breast",
+   "unit": "g",
+   "category": "Fridge",
+   "common": 3,
+   "size": 500.0,
+   "aka": []
+  },
+  {
+   "cs": "Kuřecí stehna",
+   "en": "Chicken thighs",
+   "unit": "g",
+   "category": "Fridge",
+   "common": 2,
+   "size": 1000.0,
+   "aka": []
+  },
+  {
+   "cs": "Mleté maso",
+   "en": "Minced meat",
+   "unit": "g",
+   "category": "Fridge",
+   "common": 3,
+   "size": 500.0,
+   "aka": []
+  },
+  {
+   "cs": "Vepřová plec",
+   "en": "Pork shoulder",
+   "unit": "g",
+   "category": "Fridge",
+   "common": 2,
+   "size": 500.0,
+   "aka": []
+  },
+  {
+   "cs": "Vepřová panenka",
+   "en": "Pork tenderloin",
+   "unit": "g",
+   "category": "Fridge",
+   "common": 1,
+   "size": 500.0,
+   "aka": []
+  },
+  {
+   "cs": "Hovězí zadní",
+   "en": "Beef round",
+   "unit": "g",
+   "category": "Fridge",
+   "common": 2,
+   "size": 500.0,
+   "aka": []
+  },
+  {
+   "cs": "Hovězí na guláš",
+   "en": "Stewing beef",
+   "unit": "g",
+   "category": "Fridge",
+   "common": 2,
+   "size": 500.0,
+   "aka": []
+  },
+  {
+   "cs": "Klobása",
+   "en": "Sausage",
+   "unit": "g",
+   "category": "Fridge",
+   "common": 1,
+   "size": 300.0,
+   "aka": []
+  },
+  {
+   "cs": "Párky",
+   "en": "Frankfurters",
+   "unit": "g",
+   "category": "Fridge",
+   "common": 1,
+   "size": 250.0,
+   "aka": []
+  },
+  {
+   "cs": "Losos",
+   "en": "Salmon",
+   "unit": "g",
+   "category": "Fridge",
+   "common": 1,
+   "size": 250.0,
+   "aka": []
+  },
+  {
+   "cs": "Droždí",
+   "en": "Fresh yeast",
+   "unit": "g",
+   "category": "Fridge",
+   "common": 2,
+   "size": 42.0,
+   "aka": []
+  },
+  {
+   "cs": "Sádlo",
+   "en": "Lard",
+   "unit": "g",
+   "category": "Fridge",
+   "common": 1,
+   "size": 250.0,
+   "aka": []
+  },
+  {
+   "cs": "Pesto",
+   "en": "Pesto",
+   "unit": "g",
+   "category": "Fridge",
+   "common": 1,
+   "size": 190.0,
+   "aka": []
+  },
+  {
+   "cs": "Hořčice",
+   "en": "Mustard",
+   "unit": "g",
+   "category": "Fridge",
+   "common": 2,
+   "size": 300.0,
+   "aka": []
+  },
+  {
+   "cs": "Majonéza",
+   "en": "Mayonnaise",
+   "unit": "g",
+   "category": "Fridge",
+   "common": 1,
+   "size": 250.0,
+   "aka": []
+  },
+  {
+   "cs": "Kečup",
+   "en": "Ketchup",
+   "unit": "g",
+   "category": "Fridge",
+   "common": 1,
+   "size": 500.0,
+   "aka": []
+  },
+  {
+   "cs": "Mražený hrášek",
+   "en": "Frozen peas",
+   "unit": "g",
+   "category": "Freezer",
+   "common": 2,
+   "size": 400.0,
+   "aka": []
+  },
+  {
+   "cs": "Mražená zeleninová směs",
+   "en": "Frozen mixed vegetables",
+   "unit": "g",
+   "category": "Freezer",
+   "common": 2,
+   "size": 400.0,
+   "aka": []
+  },
+  {
+   "cs": "Mražený špenát",
+   "en": "Frozen spinach",
+   "unit": "g",
+   "category": "Freezer",
+   "common": 2,
+   "size": 450.0,
+   "aka": []
+  },
+  {
+   "cs": "Mražené lesní ovoce",
+   "en": "Frozen berries",
+   "unit": "g",
+   "category": "Freezer",
+   "common": 2,
+   "size": 300.0,
+   "aka": []
+  },
+  {
+   "cs": "Listové těsto",
+   "en": "Puff pastry",
+   "unit": "g",
+   "category": "Freezer",
+   "common": 1,
+   "size": 400.0,
+   "aka": []
+  },
+  {
+   "cs": "Mražené krevety",
+   "en": "Frozen prawns",
+   "unit": "g",
+   "category": "Freezer",
+   "common": 1,
+   "size": 200.0,
+   "aka": []
+  },
+  {
+   "cs": "Rybí filé",
+   "en": "Fish fillets",
+   "unit": "g",
+   "category": "Freezer",
+   "common": 1,
+   "size": 400.0,
+   "aka": []
+  },
+  {
+   "cs": "Hladká mouka",
+   "en": "Plain flour",
+   "unit": "g",
+   "category": "Pantry",
+   "common": 3,
+   "size": 1000.0,
+   "aka": []
+  },
+  {
+   "cs": "Polohrubá mouka",
+   "en": "Semi-coarse flour",
+   "unit": "g",
+   "category": "Pantry",
+   "common": 3,
+   "size": 1000.0,
+   "aka": []
+  },
+  {
+   "cs": "Hrubá mouka",
+   "en": "Coarse flour",
+   "unit": "g",
+   "category": "Pantry",
+   "common": 2,
+   "size": 1000.0,
+   "aka": []
+  },
+  {
+   "cs": "Celozrnná mouka",
+   "en": "Wholemeal flour",
+   "unit": "g",
+   "category": "Pantry",
+   "common": 1,
+   "size": 1000.0,
+   "aka": []
+  },
+  {
+   "cs": "Kukuřičný škrob",
+   "en": "Cornflour",
+   "unit": "g",
+   "category": "Pantry",
+   "common": 2,
+   "size": 250.0,
+   "aka": []
+  },
+  {
+   "cs": "Krupicový cukr",
+   "en": "Granulated sugar",
+   "unit": "g",
+   "category": "Pantry",
+   "common": 3,
+   "size": 1000.0,
+   "aka": []
+  },
+  {
+   "cs": "Moučkový cukr",
+   "en": "Icing sugar",
+   "unit": "g",
+   "category": "Pantry",
+   "common": 2,
+   "size": 500.0,
+   "aka": []
+  },
+  {
+   "cs": "Třtinový cukr",
+   "en": "Brown sugar",
+   "unit": "g",
+   "category": "Pantry",
+   "common": 1,
+   "size": 500.0,
+   "aka": []
+  },
+  {
+   "cs": "Vanilkový cukr",
+   "en": "Vanilla sugar",
+   "unit": "pack",
+   "category": "Pantry",
+   "common": 2,
+   "size": 1.0,
+   "aka": []
+  },
+  {
+   "cs": "Prášek do pečiva",
+   "en": "Baking powder",
+   "unit": "pack",
+   "category": "Pantry",
+   "common": 2,
+   "size": 1.0,
+   "aka": []
+  },
+  {
+   "cs": "Jedlá soda",
+   "en": "Baking soda",
+   "unit": "g",
+   "category": "Pantry",
+   "common": 1,
+   "size": 50.0,
+   "aka": []
+  },
+  {
+   "cs": "Sušené droždí",
+   "en": "Dried yeast",
+   "unit": "pack",
+   "category": "Pantry",
+   "common": 2,
+   "size": 1.0,
+   "aka": []
+  },
+  {
+   "cs": "Rýže",
+   "en": "Rice",
+   "unit": "g",
+   "category": "Pantry",
+   "common": 3,
+   "size": 1000.0,
+   "aka": []
+  },
+  {
+   "cs": "Rýže arborio",
+   "en": "Arborio rice",
+   "unit": "g",
+   "category": "Pantry",
+   "common": 2,
+   "size": 500.0,
+   "aka": []
+  },
+  {
+   "cs": "Rýže basmati",
+   "en": "Basmati rice",
+   "unit": "g",
+   "category": "Pantry",
+   "common": 1,
+   "size": 500.0,
+   "aka": []
+  },
+  {
+   "cs": "Těstoviny",
+   "en": "Pasta",
+   "unit": "g",
+   "category": "Pantry",
+   "common": 3,
+   "size": 500.0,
+   "aka": []
+  },
+  {
+   "cs": "Špagety",
+   "en": "Spaghetti",
+   "unit": "g",
+   "category": "Pantry",
+   "common": 2,
+   "size": 500.0,
+   "aka": []
+  },
+  {
+   "cs": "Penne",
+   "en": "Penne",
+   "unit": "g",
+   "category": "Pantry",
+   "common": 2,
+   "size": 500.0,
+   "aka": [
+    "penne rigate",
+    "pera"
+   ]
+  },
+  {
+   "cs": "Fusilli",
+   "en": "Fusilli",
+   "unit": "g",
+   "category": "Pantry",
+   "common": 2,
+   "size": 500.0,
+   "aka": [
+    "vřetena",
+    "šroubky",
+    "vřetýnka"
+   ]
+  },
+  {
+   "cs": "Farfalle",
+   "en": "Farfalle",
+   "unit": "g",
+   "category": "Pantry",
+   "common": 1,
+   "size": 500.0,
+   "aka": [
+    "kolínka motýlky",
+    "mašličky",
+    "motýlky"
+   ]
+  },
+  {
+   "cs": "Cavatappi",
+   "en": "Cavatappi",
+   "unit": "g",
+   "category": "Pantry",
+   "common": 1,
+   "size": 500.0,
+   "aka": [
+    "cellentani",
+    "spirálky"
+   ]
+  },
+  {
+   "cs": "Bucatini",
+   "en": "Bucatini",
+   "unit": "g",
+   "category": "Pantry",
+   "common": 1,
+   "size": 500.0,
+   "aka": []
+  },
+  {
+   "cs": "Linguine",
+   "en": "Linguine",
+   "unit": "g",
+   "category": "Pantry",
+   "common": 1,
+   "size": 500.0,
+   "aka": []
+  },
+  {
+   "cs": "Tagliatelle",
+   "en": "Tagliatelle",
+   "unit": "g",
+   "category": "Pantry",
+   "common": 1,
+   "size": 500.0,
+   "aka": [
+    "široké nudle",
+    "fettuccine"
+   ]
+  },
+  {
+   "cs": "Kolínka",
+   "en": "Elbow macaroni",
+   "unit": "g",
+   "category": "Pantry",
+   "common": 1,
+   "size": 500.0,
+   "aka": [
+    "makarony"
+   ]
+  },
+  {
+   "cs": "Lasagne",
+   "en": "Lasagne sheets",
+   "unit": "g",
+   "category": "Pantry",
+   "common": 1,
+   "size": 500.0,
+   "aka": [
+    "lasagne plátky"
+   ]
+  },
+  {
+   "cs": "Polévkové nudle",
+   "en": "Soup noodles",
+   "unit": "g",
+   "category": "Pantry",
+   "common": 2,
+   "size": 500.0,
+   "aka": [
+    "vlasové nudle",
+    "nudle do polévky",
+    "vaječné nudle",
+    "fidea"
+   ]
+  },
+  {
+   "cs": "Gnocchi",
+   "en": "Gnocchi",
+   "unit": "g",
+   "category": "Fridge",
+   "common": 1,
+   "size": 500.0,
+   "aka": [
+    "noky"
+   ]
+  },
+  {
+   "cs": "Kuskus",
+   "en": "Couscous",
+   "unit": "g",
+   "category": "Pantry",
+   "common": 1,
+   "size": 500.0,
+   "aka": []
+  },
+  {
+   "cs": "Bulgur",
+   "en": "Bulgur",
+   "unit": "g",
+   "category": "Pantry",
+   "common": 1,
+   "size": 500.0,
+   "aka": []
+  },
+  {
+   "cs": "Ovesné vločky",
+   "en": "Rolled oats",
+   "unit": "g",
+   "category": "Pantry",
+   "common": 2,
+   "size": 500.0,
+   "aka": []
+  },
+  {
+   "cs": "Čočka",
+   "en": "Lentils",
+   "unit": "g",
+   "category": "Pantry",
+   "common": 2,
+   "size": 500.0,
+   "aka": []
+  },
+  {
+   "cs": "Červená čočka",
+   "en": "Red lentils",
+   "unit": "g",
+   "category": "Pantry",
+   "common": 1,
+   "size": 500.0,
+   "aka": []
+  },
+  {
+   "cs": "Cizrna",
+   "en": "Chickpeas",
+   "unit": "g",
+   "category": "Pantry",
+   "common": 1,
+   "size": 500.0,
+   "aka": []
+  },
+  {
+   "cs": "Fazole",
+   "en": "Beans",
+   "unit": "g",
+   "category": "Pantry",
+   "common": 1,
+   "size": 500.0,
+   "aka": [
+    "bílé fazole"
+   ]
+  },
+  {
+   "cs": "Černé fazole",
+   "en": "Black beans",
+   "unit": "g",
+   "category": "Pantry",
+   "common": 1,
+   "size": 500.0,
+   "aka": [
+    "fazole černé"
+   ]
+  },
+  {
+   "cs": "Rýže ve varných sáčcích",
+   "en": "Boil-in-bag rice",
+   "unit": "pack",
+   "category": "Pantry",
+   "common": 1,
+   "size": 8.0,
+   "aka": [
+    "varné sáčky",
+    "rýže v sáčcích"
+   ]
+  },
+  {
+   "cs": "Krupice",
+   "en": "Semolina",
+   "unit": "g",
+   "category": "Pantry",
+   "common": 1,
+   "size": 500.0,
+   "aka": []
+  },
+  {
+   "cs": "Strouhanka",
+   "en": "Breadcrumbs",
+   "unit": "g",
+   "category": "Pantry",
+   "common": 2,
+   "size": 250.0,
+   "aka": []
+  },
+  {
+   "cs": "Olivový olej",
+   "en": "Olive oil",
+   "unit": "ml",
+   "category": "Pantry",
+   "common": 3,
+   "size": 500.0,
+   "aka": []
+  },
+  {
+   "cs": "Slunečnicový olej",
+   "en": "Sunflower oil",
+   "unit": "ml",
+   "category": "Pantry",
+   "common": 3,
+   "size": 1000.0,
+   "aka": []
+  },
+  {
+   "cs": "Řepkový olej",
+   "en": "Rapeseed oil",
+   "unit": "ml",
+   "category": "Pantry",
+   "common": 2,
+   "size": 1000.0,
+   "aka": []
+  },
+  {
+   "cs": "Ocet",
+   "en": "Vinegar",
+   "unit": "ml",
+   "category": "Pantry",
+   "common": 2,
+   "size": 1000.0,
+   "aka": []
+  },
+  {
+   "cs": "Balzamikový ocet",
+   "en": "Balsamic vinegar",
+   "unit": "ml",
+   "category": "Pantry",
+   "common": 1,
+   "size": 250.0,
+   "aka": []
+  },
+  {
+   "cs": "Sójová omáčka",
+   "en": "Soy sauce",
+   "unit": "ml",
+   "category": "Pantry",
+   "common": 2,
+   "size": 150.0,
+   "aka": []
+  },
+  {
+   "cs": "Rajčatový protlak",
+   "en": "Tomato paste",
+   "unit": "g",
+   "category": "Pantry",
+   "common": 3,
+   "size": 70.0,
+   "aka": []
+  },
+  {
+   "cs": "Krájená rajčata v plechovce",
+   "en": "Canned chopped tomatoes",
+   "unit": "g",
+   "category": "Pantry",
+   "common": 3,
+   "size": 400.0,
+   "aka": []
+  },
+  {
+   "cs": "Passata",
+   "en": "Passata",
+   "unit": "g",
+   "category": "Pantry",
+   "common": 2,
+   "size": 500.0,
+   "aka": []
+  },
+  {
+   "cs": "Kokosové mléko",
+   "en": "Coconut milk",
+   "unit": "ml",
+   "category": "Pantry",
+   "common": 2,
+   "size": 400.0,
+   "aka": []
+  },
+  {
+   "cs": "Zeleninový bujón",
+   "en": "Vegetable stock cubes",
+   "unit": "pack",
+   "category": "Pantry",
+   "common": 3,
+   "size": 1.0,
+   "aka": []
+  },
+  {
+   "cs": "Kuřecí bujón",
+   "en": "Chicken stock cubes",
+   "unit": "pack",
+   "category": "Pantry",
+   "common": 2,
+   "size": 1.0,
+   "aka": []
+  },
+  {
+   "cs": "Hovězí bujón",
+   "en": "Beef stock cubes",
+   "unit": "pack",
+   "category": "Pantry",
+   "common": 1,
+   "size": 1.0,
+   "aka": []
+  },
+  {
+   "cs": "Med",
+   "en": "Honey",
+   "unit": "g",
+   "category": "Pantry",
+   "common": 2,
+   "size": 500.0,
+   "aka": []
+  },
+  {
+   "cs": "Kakao",
+   "en": "Cocoa powder",
+   "unit": "g",
+   "category": "Pantry",
+   "common": 2,
+   "size": 100.0,
+   "aka": []
+  },
+  {
+   "cs": "Hořká čokoláda",
+   "en": "Dark chocolate",
+   "unit": "g",
+   "category": "Pantry",
+   "common": 2,
+   "size": 100.0,
+   "aka": []
+  },
+  {
+   "cs": "Mandle",
+   "en": "Almonds",
+   "unit": "g",
+   "category": "Pantry",
+   "common": 1,
+   "size": 100.0,
+   "aka": []
+  },
+  {
+   "cs": "Vlašské ořechy",
+   "en": "Walnuts",
+   "unit": "g",
+   "category": "Pantry",
+   "common": 1,
+   "size": 100.0,
+   "aka": []
+  },
+  {
+   "cs": "Lískové ořechy",
+   "en": "Hazelnuts",
+   "unit": "g",
+   "category": "Pantry",
+   "common": 1,
+   "size": 100.0,
+   "aka": []
+  },
+  {
+   "cs": "Rozinky",
+   "en": "Raisins",
+   "unit": "g",
+   "category": "Pantry",
+   "common": 1,
+   "size": 100.0,
+   "aka": []
+  },
+  {
+   "cs": "Kukuřice v plechovce",
+   "en": "Canned sweetcorn",
+   "unit": "g",
+   "category": "Pantry",
+   "common": 1,
+   "size": 340.0,
+   "aka": []
+  },
+  {
+   "cs": "Tuňák v plechovce",
+   "en": "Canned tuna",
+   "unit": "g",
+   "category": "Pantry",
+   "common": 1,
+   "size": 160.0,
+   "aka": []
+  },
+  {
+   "cs": "Arašídové máslo",
+   "en": "Peanut butter",
+   "unit": "g",
+   "category": "Pantry",
+   "common": 1,
+   "size": 350.0,
+   "aka": []
+  },
+  {
+   "cs": "Želatina",
+   "en": "Gelatine",
+   "unit": "g",
+   "category": "Pantry",
+   "common": 1,
+   "size": 20.0,
+   "aka": []
+  },
+  {
+   "cs": "Bílé víno",
+   "en": "White wine",
+   "unit": "ml",
+   "category": "Pantry",
+   "common": 1,
+   "size": 750.0,
+   "aka": []
+  },
+  {
+   "cs": "Červené víno",
+   "en": "Red wine",
+   "unit": "ml",
+   "category": "Pantry",
+   "common": 1,
+   "size": 750.0,
+   "aka": []
+  },
+  {
+   "cs": "Cibule",
+   "en": "Onions",
+   "unit": "g",
+   "category": "Fruit & veg",
+   "common": 3,
+   "size": 1000.0,
+   "aka": []
+  },
+  {
+   "cs": "Červená cibule",
+   "en": "Red onions",
+   "unit": "g",
+   "category": "Fruit & veg",
+   "common": 2,
+   "size": 500.0,
+   "aka": []
+  },
+  {
+   "cs": "Česnek",
+   "en": "Garlic",
+   "unit": "pcs",
+   "category": "Fruit & veg",
+   "common": 3,
+   "size": 1.0,
+   "aka": []
+  },
+  {
+   "cs": "Brambory",
+   "en": "Potatoes",
+   "unit": "g",
+   "category": "Fruit & veg",
+   "common": 3,
+   "size": 2000.0,
+   "aka": []
+  },
+  {
+   "cs": "Mrkev",
+   "en": "Carrots",
+   "unit": "g",
+   "category": "Fruit & veg",
+   "common": 3,
+   "size": 1000.0,
+   "aka": []
+  },
+  {
+   "cs": "Petržel kořenová",
+   "en": "Parsley root",
+   "unit": "g",
+   "category": "Fruit & veg",
+   "common": 2,
+   "size": 500.0,
+   "aka": []
+  },
+  {
+   "cs": "Celer",
+   "en": "Celeriac",
+   "unit": "g",
+   "category": "Fruit & veg",
+   "common": 2,
+   "size": 500.0,
+   "aka": []
+  },
+  {
+   "cs": "Řapíkatý celer",
+   "en": "Celery",
+   "unit": "g",
+   "category": "Fruit & veg",
+   "common": 1,
+   "size": 500.0,
+   "aka": []
+  },
+  {
+   "cs": "Pórek",
+   "en": "Leek",
+   "unit": "pcs",
+   "category": "Fruit & veg",
+   "common": 2,
+   "size": 1.0,
+   "aka": []
+  },
+  {
+   "cs": "Rajčata",
+   "en": "Tomatoes",
+   "unit": "g",
+   "category": "Fruit & veg",
+   "common": 3,
+   "size": 500.0,
+   "aka": []
+  },
+  {
+   "cs": "Cherry rajčata",
+   "en": "Cherry tomatoes",
+   "unit": "g",
+   "category": "Fruit & veg",
+   "common": 2,
+   "size": 250.0,
+   "aka": []
+  },
+  {
+   "cs": "Okurka salátová",
+   "en": "Cucumber",
+   "unit": "pcs",
+   "category": "Fruit & veg",
+   "common": 2,
+   "size": 1.0,
+   "aka": []
+  },
+  {
+   "cs": "Paprika",
+   "en": "Bell peppers",
+   "unit": "pcs",
+   "category": "Fruit & veg",
+   "common": 3,
+   "size": 3.0,
+   "aka": []
+  },
+  {
+   "cs": "Cuketa",
+   "en": "Courgette",
+   "unit": "pcs",
+   "category": "Fruit & veg",
+   "common": 2,
+   "size": 1.0,
+   "aka": []
+  },
+  {
+   "cs": "Lilek",
+   "en": "Aubergine",
+   "unit": "pcs",
+   "category": "Fruit & veg",
+   "common": 1,
+   "size": 1.0,
+   "aka": []
+  },
+  {
+   "cs": "Brokolice",
+   "en": "Broccoli",
+   "unit": "g",
+   "category": "Fruit & veg",
+   "common": 2,
+   "size": 400.0,
+   "aka": []
+  },
+  {
+   "cs": "Květák",
+   "en": "Cauliflower",
+   "unit": "pcs",
+   "category": "Fruit & veg",
+   "common": 2,
+   "size": 1.0,
+   "aka": []
+  },
+  {
+   "cs": "Zelí",
+   "en": "Cabbage",
+   "unit": "pcs",
+   "category": "Fruit & veg",
+   "common": 2,
+   "size": 1.0,
+   "aka": []
+  },
+  {
+   "cs": "Kysané zelí",
+   "en": "Sauerkraut",
+   "unit": "g",
+   "category": "Fruit & veg",
+   "common": 1,
+   "size": 500.0,
+   "aka": []
+  },
+  {
+   "cs": "Špenát čerstvý",
+   "en": "Fresh spinach",
+   "unit": "g",
+   "category": "Fruit & veg",
+   "common": 2,
+   "size": 200.0,
+   "aka": []
+  },
+  {
+   "cs": "Ledový salát",
+   "en": "Iceberg lettuce",
+   "unit": "pcs",
+   "category": "Fruit & veg",
+   "common": 1,
+   "size": 1.0,
+   "aka": []
+  },
+  {
+   "cs": "Žampiony",
+   "en": "Mushrooms",
+   "unit": "g",
+   "category": "Fruit & veg",
+   "common": 2,
+   "size": 250.0,
+   "aka": []
+  },
+  {
+   "cs": "Dýně Hokkaido",
+   "en": "Hokkaido pumpkin",
+   "unit": "g",
+   "category": "Fruit & veg",
+   "common": 2,
+   "size": 1000.0,
+   "aka": []
+  },
+  {
+   "cs": "Batáty",
+   "en": "Sweet potatoes",
+   "unit": "g",
+   "category": "Fruit & veg",
+   "common": 1,
+   "size": 500.0,
+   "aka": []
+  },
+  {
+   "cs": "Červená řepa",
+   "en": "Beetroot",
+   "unit": "g",
+   "category": "Fruit & veg",
+   "common": 1,
+   "size": 500.0,
+   "aka": []
+  },
+  {
+   "cs": "Kedlubna",
+   "en": "Kohlrabi",
+   "unit": "pcs",
+   "category": "Fruit & veg",
+   "common": 1,
+   "size": 1.0,
+   "aka": []
+  },
+  {
+   "cs": "Zázvor",
+   "en": "Ginger",
+   "unit": "g",
+   "category": "Fruit & veg",
+   "common": 2,
+   "size": 100.0,
+   "aka": []
+  },
+  {
+   "cs": "Chilli papričky",
+   "en": "Chilli peppers",
+   "unit": "pcs",
+   "category": "Fruit & veg",
+   "common": 1,
+   "size": 3.0,
+   "aka": [
+    "chili papričky",
+    "feferonky",
+    "čerstvé chilli"
+   ]
+  },
+  {
+   "cs": "Jarní cibulka",
+   "en": "Spring onions",
+   "unit": "pack",
+   "category": "Fruit & veg",
+   "common": 1,
+   "size": 1.0,
+   "aka": []
+  },
+  {
+   "cs": "Citron",
+   "en": "Lemons",
+   "unit": "pcs",
+   "category": "Fruit & veg",
+   "common": 3,
+   "size": 3.0,
+   "aka": []
+  },
+  {
+   "cs": "Limetka",
+   "en": "Limes",
+   "unit": "pcs",
+   "category": "Fruit & veg",
+   "common": 1,
+   "size": 2.0,
+   "aka": []
+  },
+  {
+   "cs": "Pomeranče",
+   "en": "Oranges",
+   "unit": "pcs",
+   "category": "Fruit & veg",
+   "common": 1,
+   "size": 4.0,
+   "aka": []
+  },
+  {
+   "cs": "Jablka",
+   "en": "Apples",
+   "unit": "pcs",
+   "category": "Fruit & veg",
+   "common": 3,
+   "size": 6.0,
+   "aka": [
+    "jablko"
+   ]
+  },
+  {
+   "cs": "Hrušky",
+   "en": "Pears",
+   "unit": "g",
+   "category": "Fruit & veg",
+   "common": 1,
+   "size": 500.0,
+   "aka": []
+  },
+  {
+   "cs": "Banány",
+   "en": "Bananas",
+   "unit": "pcs",
+   "category": "Fruit & veg",
+   "common": 2,
+   "size": 5.0,
+   "aka": []
+  },
+  {
+   "cs": "Jahody",
+   "en": "Strawberries",
+   "unit": "g",
+   "category": "Fruit & veg",
+   "common": 1,
+   "size": 500.0,
+   "aka": []
+  },
+  {
+   "cs": "Borůvky",
+   "en": "Blueberries",
+   "unit": "g",
+   "category": "Fruit & veg",
+   "common": 1,
+   "size": 125.0,
+   "aka": []
+  },
+  {
+   "cs": "Avokádo",
+   "en": "Avocado",
+   "unit": "pcs",
+   "category": "Fruit & veg",
+   "common": 1,
+   "size": 1.0,
+   "aka": []
+  },
+  {
+   "cs": "Sůl",
+   "en": "Salt",
+   "unit": "g",
+   "category": "Spices & herbs",
+   "common": 3,
+   "size": 1000.0,
+   "aka": []
+  },
+  {
+   "cs": "Černý pepř mletý",
+   "en": "Ground black pepper",
+   "unit": "g",
+   "category": "Spices & herbs",
+   "common": 3,
+   "size": 20.0,
+   "aka": []
+  },
+  {
+   "cs": "Pepř celý",
+   "en": "Whole peppercorns",
+   "unit": "g",
+   "category": "Spices & herbs",
+   "common": 2,
+   "size": 25.0,
+   "aka": []
+  },
+  {
+   "cs": "Sladká paprika",
+   "en": "Sweet paprika",
+   "unit": "g",
+   "category": "Spices & herbs",
+   "common": 3,
+   "size": 25.0,
+   "aka": []
+  },
+  {
+   "cs": "Uzená paprika",
+   "en": "Smoked paprika",
+   "unit": "g",
+   "category": "Spices & herbs",
+   "common": 1,
+   "size": 25.0,
+   "aka": []
+  },
+  {
+   "cs": "Pálivá paprika",
+   "en": "Hot paprika",
+   "unit": "g",
+   "category": "Spices & herbs",
+   "common": 1,
+   "size": 25.0,
+   "aka": []
+  },
+  {
+   "cs": "Chilli mleté",
+   "en": "Ground chilli",
+   "unit": "g",
+   "category": "Spices & herbs",
+   "common": 2,
+   "size": 30.0,
+   "aka": [
+    "chili mleté",
+    "kajenský pepř",
+    "kayenský pepř",
+    "cayenne",
+    "feferonka mletá"
+   ]
+  },
+  {
+   "cs": "Chilli vločky",
+   "en": "Chilli flakes",
+   "unit": "g",
+   "category": "Spices & herbs",
+   "common": 1,
+   "size": 25.0,
+   "aka": [
+    "chili vločky",
+    "drcené chilli"
+   ]
+  },
+  {
+   "cs": "Pepř bílý mletý",
+   "en": "Ground white pepper",
+   "unit": "g",
+   "category": "Spices & herbs",
+   "common": 1,
+   "size": 20.0,
+   "aka": [
+    "bílý pepř"
+   ]
+  },
+  {
+   "cs": "Zázvor mletý",
+   "en": "Ground ginger",
+   "unit": "g",
+   "category": "Spices & herbs",
+   "common": 1,
+   "size": 20.0,
+   "aka": []
+  },
+  {
+   "cs": "Česnek granulovaný",
+   "en": "Granulated garlic",
+   "unit": "g",
+   "category": "Spices & herbs",
+   "common": 2,
+   "size": 30.0,
+   "aka": [
+    "sušený česnek",
+    "česnek sušený",
+    "česnekový prášek"
+   ]
+  },
+  {
+   "cs": "Cibule sušená",
+   "en": "Dried onion",
+   "unit": "g",
+   "category": "Spices & herbs",
+   "common": 1,
+   "size": 30.0,
+   "aka": [
+    "cibule granulovaná",
+    "cibulový prášek"
+   ]
+  },
+  {
+   "cs": "Gyros koření",
+   "en": "Gyros seasoning",
+   "unit": "g",
+   "category": "Spices & herbs",
+   "common": 1,
+   "size": 30.0,
+   "aka": []
+  },
+  {
+   "cs": "Grilovací koření",
+   "en": "Barbecue seasoning",
+   "unit": "g",
+   "category": "Spices & herbs",
+   "common": 1,
+   "size": 30.0,
+   "aka": [
+    "grill koření"
+   ]
+  },
+  {
+   "cs": "Kotányi Gril",
+   "en": "Kotányi Grill seasoning",
+   "unit": "g",
+   "category": "Spices & herbs",
+   "common": 1,
+   "size": 36.0,
+   "aka": [
+    "gril kotányi",
+    "grilovací koření kotányi",
+    "gril"
+   ]
+  },
+  {
+   "cs": "Vitana Americké brambory",
+   "en": "Vitana American potato seasoning",
+   "unit": "g",
+   "category": "Spices & herbs",
+   "common": 1,
+   "size": 28.0,
+   "aka": [
+    "americké brambory",
+    "koření na brambory"
+   ]
+  },
+  {
+   "cs": "Kmín mletý",
+   "en": "Ground caraway",
+   "unit": "g",
+   "category": "Spices & herbs",
+   "common": 1,
+   "size": 30.0,
+   "aka": []
+  },
+  {
+   "cs": "Vegeta",
+   "en": "All-purpose seasoning",
+   "unit": "g",
+   "category": "Spices & herbs",
+   "common": 2,
+   "size": 250.0,
+   "aka": [
+    "podravka",
+    "univerzální dochucovadlo"
+   ]
+  },
+  {
+   "cs": "Sůl mořská",
+   "en": "Sea salt",
+   "unit": "g",
+   "category": "Spices & herbs",
+   "common": 1,
+   "size": 500.0,
+   "aka": [
+    "mořská sůl"
+   ]
+  },
+  {
+   "cs": "Tymián",
+   "en": "Thyme",
+   "unit": "g",
+   "category": "Spices & herbs",
+   "common": 2,
+   "size": 10.0,
+   "aka": [
+    "mateřídouška"
+   ]
+  },
+  {
+   "cs": "Chilli omáčka",
+   "en": "Chilli sauce",
+   "unit": "ml",
+   "category": "Pantry",
+   "common": 1,
+   "size": 200.0,
+   "aka": [
+    "sriracha",
+    "sweet chilli"
+   ]
+  },
+  {
+   "cs": "Worcesterová omáčka",
+   "en": "Worcestershire sauce",
+   "unit": "ml",
+   "category": "Pantry",
+   "common": 1,
+   "size": 150.0,
+   "aka": [
+    "worcester",
+    "worchester"
+   ]
+  },
+  {
+   "cs": "Kmín",
+   "en": "Caraway",
+   "unit": "g",
+   "category": "Spices & herbs",
+   "common": 3,
+   "size": 30.0,
+   "aka": []
+  },
+  {
+   "cs": "Majoránka",
+   "en": "Marjoram",
+   "unit": "g",
+   "category": "Spices & herbs",
+   "common": 3,
+   "size": 5.0,
+   "aka": []
+  },
+  {
+   "cs": "Bobkový list",
+   "en": "Bay leaves",
+   "unit": "pack",
+   "category": "Spices & herbs",
+   "common": 2,
+   "size": 1.0,
+   "aka": []
+  },
+  {
+   "cs": "Nové koření",
+   "en": "Allspice",
+   "unit": "g",
+   "category": "Spices & herbs",
+   "common": 2,
+   "size": 15.0,
+   "aka": []
+  },
+  {
+   "cs": "Oregano",
+   "en": "Oregano",
+   "unit": "g",
+   "category": "Spices & herbs",
+   "common": 2,
+   "size": 10.0,
+   "aka": []
+  },
+  {
+   "cs": "Bazalka sušená",
+   "en": "Dried basil",
+   "unit": "g",
+   "category": "Spices & herbs",
+   "common": 2,
+   "size": 10.0,
+   "aka": [
+    "bazalka drhnutá",
+    "bazalka"
+   ]
+  },
+  {
+   "cs": "Rozmarýn",
+   "en": "Rosemary",
+   "unit": "g",
+   "category": "Spices & herbs",
+   "common": 1,
+   "size": 10.0,
+   "aka": []
+  },
+  {
+   "cs": "Kari",
+   "en": "Curry powder",
+   "unit": "g",
+   "category": "Spices & herbs",
+   "common": 2,
+   "size": 25.0,
+   "aka": []
+  },
+  {
+   "cs": "Kurkuma",
+   "en": "Turmeric",
+   "unit": "g",
+   "category": "Spices & herbs",
+   "common": 1,
+   "size": 20.0,
+   "aka": []
+  },
+  {
+   "cs": "Římský kmín",
+   "en": "Cumin",
+   "unit": "g",
+   "category": "Spices & herbs",
+   "common": 1,
+   "size": 25.0,
+   "aka": [
+    "kumín",
+    "římský kmín mletý",
+    "cumin"
+   ]
+  },
+  {
+   "cs": "Skořice",
+   "en": "Cinnamon",
+   "unit": "g",
+   "category": "Spices & herbs",
+   "common": 2,
+   "size": 20.0,
+   "aka": []
+  },
+  {
+   "cs": "Muškátový oříšek",
+   "en": "Nutmeg",
+   "unit": "g",
+   "category": "Spices & herbs",
+   "common": 1,
+   "size": 10.0,
+   "aka": []
+  },
+  {
+   "cs": "Hřebíček",
+   "en": "Cloves",
+   "unit": "g",
+   "category": "Spices & herbs",
+   "common": 1,
+   "size": 10.0,
+   "aka": []
+  },
+  {
+   "cs": "Hořčičná semínka",
+   "en": "Mustard seeds",
+   "unit": "g",
+   "category": "Spices & herbs",
+   "common": 1,
+   "size": 50.0,
+   "aka": [
+    "hořčičné semínko",
+    "hořčice celá",
+    "semínka hořčice"
+   ]
+  },
+  {
+   "cs": "Badyán",
+   "en": "Star anise",
+   "unit": "g",
+   "category": "Spices & herbs",
+   "common": 1,
+   "size": 10.0,
+   "aka": []
+  },
+  {
+   "cs": "Vanilkový lusk",
+   "en": "Vanilla pod",
+   "unit": "pcs",
+   "category": "Spices & herbs",
+   "common": 1,
+   "size": 1.0,
+   "aka": []
+  },
+  {
+   "cs": "Petrželka čerstvá",
+   "en": "Fresh parsley",
+   "unit": "pack",
+   "category": "Spices & herbs",
+   "common": 2,
+   "size": 1.0,
+   "aka": []
+  },
+  {
+   "cs": "Pažitka",
+   "en": "Chives",
+   "unit": "pack",
+   "category": "Spices & herbs",
+   "common": 1,
+   "size": 1.0,
+   "aka": []
+  },
+  {
+   "cs": "Kopr",
+   "en": "Dill",
+   "unit": "pack",
+   "category": "Spices & herbs",
+   "common": 1,
+   "size": 1.0,
+   "aka": []
+  },
+  {
+   "cs": "Koriandr čerstvý",
+   "en": "Fresh coriander",
+   "unit": "pack",
+   "category": "Spices & herbs",
+   "common": 1,
+   "size": 1.0,
+   "aka": []
+  }
+ ]
+}

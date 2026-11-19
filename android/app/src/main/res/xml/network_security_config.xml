@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- food.force.local is served by Caddy with its own local CA (root valid until 2035).
+     Trust that root for this host only; everything else uses the normal system CAs. No plain HTTP. -->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="false">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+    <domain-config cleartextTrafficPermitted="false">
+        <domain includeSubdomains="false">food.force.local</domain>
+        <trust-anchors>
+            <certificates src="@raw/caddy_root" />
+        </trust-anchors>
+    </domain-config>
+</network-security-config>

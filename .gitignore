@@ -1,0 +1,12 @@
+# Gradle / Android build output
+.gradle/
+build/
+local.properties
+*.iml
+.idea/
+.kotlin/
+captures/
+# Never commit signing keys
+*.p12
+*.jks
+*.keystore
