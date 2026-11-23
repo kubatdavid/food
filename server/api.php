@@ -3,6 +3,10 @@
 // Storage: JSON files (flock-guarded). Recipes: Markdown files dropped into RECIPES.
 declare(strict_types=1);
 
+// On food.abhishekam.cz the API needs the guest cookie (see guest_auth.php); LAN is not gated.
+require __DIR__ . '/guest_auth.php';
+guest_gate();
+
 header('Content-Type: application/json; charset=utf-8');
 header('Cache-Control: no-store');
 
