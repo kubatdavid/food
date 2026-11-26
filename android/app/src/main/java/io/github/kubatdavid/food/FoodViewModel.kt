@@ -137,7 +137,8 @@ class FoodViewModel : ViewModel() {
 
     /** One tap: the item ran out (qty 0). It stays listed so it can go on the shopping list; the snackbar can undo it. */
     fun markOut(item: PantryItem) {
-        val before = item.qty
+        val before = _items.value.firstOrNull { it.id == item.id }?.qty ?: return
+        if (before <= 0.0) return   // already out (e.g. a repeated swipe callback)
         setQty(item, 0.0)
         _undoables.tryEmit(Undoable("Došlo: ${item.name}") { setQty(item, before) })
     }

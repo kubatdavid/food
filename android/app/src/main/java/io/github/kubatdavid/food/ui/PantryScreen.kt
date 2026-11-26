@@ -1,5 +1,6 @@
 package io.github.kubatdavid.food.ui
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -14,7 +15,6 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExtendedFloatingActionButton
 import androidx.compose.material3.FilledTonalIconButton
@@ -23,12 +23,15 @@ import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Surface
+import androidx.compose.material3.SwipeToDismissBox
+import androidx.compose.material3.SwipeToDismissBoxValue
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.pulltorefresh.PullToRefreshBox
+import androidx.compose.material3.rememberSwipeToDismissBoxState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
@@ -104,13 +107,14 @@ fun PantryScreen(vm: FoodViewModel) {
                 groups.forEach { (category, list) ->
                     item(key = "h-$category") { GroupHeader(Cs.category(category), list.size) }
                     items(list.sortedBy { it.name.lowercase() }, key = { it.id }) { item ->
-                        PantryRow(
-                            item,
-                            onMinus = { vm.setQty(item, item.qty - Cs.step(item.unit)) },
-                            onPlus = { vm.setQty(item, item.qty + Cs.step(item.unit)) },
-                            onOut = { vm.markOut(item) },
-                            onClick = { editingId = item.id },
-                        )
+                        SwipeOut(item, onOut = { vm.markOut(item) }) {
+                            PantryRow(
+                                item,
+                                onMinus = { vm.setQty(item, item.qty - Cs.step(item.unit)) },
+                                onPlus = { vm.setQty(item, item.qty + Cs.step(item.unit)) },
+                                onClick = { editingId = item.id },
+                            )
+                        }
                         HorizontalDivider()
                     }
                 }
@@ -142,11 +146,34 @@ fun PantryScreen(vm: FoodViewModel) {
     }
 }
 
+/** Swipe an in-stock row left or right: the item ran out (qty 0). The row snaps back and stays listed, now at 0. */
+@Suppress("DEPRECATION")
 @Composable
-private fun PantryRow(item: PantryItem, onMinus: () -> Unit, onPlus: () -> Unit, onOut: () -> Unit, onClick: () -> Unit) {
+private fun SwipeOut(item: PantryItem, onOut: () -> Unit, content: @Composable () -> Unit) {
+    if (item.isOut()) { content(); return }
+    val currentOnOut by rememberUpdatedState(onOut)
+    val state = rememberSwipeToDismissBoxState(confirmValueChange = { v ->
+        if (v != SwipeToDismissBoxValue.Settled) currentOnOut()
+        false
+    })
+    SwipeToDismissBox(
+        state = state,
+        backgroundContent = {
+            val toRight = state.dismissDirection == SwipeToDismissBoxValue.StartToEnd
+            Box(
+                Modifier.fillMaxSize().background(MaterialTheme.colorScheme.errorContainer).padding(horizontal = 20.dp),
+                contentAlignment = if (toRight) Alignment.CenterStart else Alignment.CenterEnd,
+            ) { Text("Došlo", color = MaterialTheme.colorScheme.onErrorContainer, style = MaterialTheme.typography.titleMedium) }
+        },
+    ) { content() }
+}
+
+@Composable
+private fun PantryRow(item: PantryItem, onMinus: () -> Unit, onPlus: () -> Unit, onClick: () -> Unit) {
     Row(
         Modifier
             .fillMaxWidth()
+            .background(MaterialTheme.colorScheme.background)
             .clickable(onClick = onClick)
             .padding(vertical = 8.dp),
         verticalAlignment = Alignment.CenterVertically,
@@ -162,13 +189,6 @@ private fun PantryRow(item: PantryItem, onMinus: () -> Unit, onPlus: () -> Unit,
                 if (item.isOut()) Tag("Došlo", bad = true)
                 ExpiryTag(item.expires)
             }
-        }
-        if (!item.isOut()) {
-            TextButton(
-                onClick = onOut,
-                contentPadding = PaddingValues(horizontal = 8.dp),
-                colors = ButtonDefaults.textButtonColors(contentColor = MaterialTheme.colorScheme.error),
-            ) { Text("Došlo") }
         }
         FilledTonalIconButton(onClick = onMinus) { Text("−", style = MaterialTheme.typography.titleMedium) }
         Text(
