@@ -14,6 +14,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExtendedFloatingActionButton
 import androidx.compose.material3.FilledTonalIconButton
@@ -23,6 +24,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.material3.pulltorefresh.PullToRefreshBox
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -106,6 +108,7 @@ fun PantryScreen(vm: FoodViewModel) {
                             item,
                             onMinus = { vm.setQty(item, item.qty - Cs.step(item.unit)) },
                             onPlus = { vm.setQty(item, item.qty + Cs.step(item.unit)) },
+                            onOut = { vm.markOut(item) },
                             onClick = { editingId = item.id },
                         )
                         HorizontalDivider()
@@ -140,7 +143,7 @@ fun PantryScreen(vm: FoodViewModel) {
 }
 
 @Composable
-private fun PantryRow(item: PantryItem, onMinus: () -> Unit, onPlus: () -> Unit, onClick: () -> Unit) {
+private fun PantryRow(item: PantryItem, onMinus: () -> Unit, onPlus: () -> Unit, onOut: () -> Unit, onClick: () -> Unit) {
     Row(
         Modifier
             .fillMaxWidth()
@@ -159,6 +162,13 @@ private fun PantryRow(item: PantryItem, onMinus: () -> Unit, onPlus: () -> Unit,
                 if (item.isOut()) Tag("Došlo", bad = true)
                 ExpiryTag(item.expires)
             }
+        }
+        if (!item.isOut()) {
+            TextButton(
+                onClick = onOut,
+                contentPadding = PaddingValues(horizontal = 8.dp),
+                colors = ButtonDefaults.textButtonColors(contentColor = MaterialTheme.colorScheme.error),
+            ) { Text("Došlo") }
         }
         FilledTonalIconButton(onClick = onMinus) { Text("−", style = MaterialTheme.typography.titleMedium) }
         Text(

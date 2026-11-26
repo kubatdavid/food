@@ -117,6 +117,18 @@ function add_to_pantry(array &$items, array $new): void
         }
     }
     unset($it);
+    // Same name but a different unit, and that item has run out (qty 0): reuse it with the new unit
+    // instead of adding a duplicate row (e.g. "Rýže 0 g" + bought "Rýže 1 pack").
+    foreach ($items as &$it) {
+        if (mb_strtolower($it['name']) === mb_strtolower($new['name']) && (float)($it['qty'] ?? 0) <= 0) {
+            $it['qty'] = $new['qty'];
+            $it['unit'] = $new['unit'];
+            if (!empty($new['expires'])) $it['expires'] = $new['expires'];
+            $it['updatedAt'] = $new['updatedAt'];
+            return;
+        }
+    }
+    unset($it);
     $new['id'] = bin2hex(random_bytes(8));
     $items[] = $new;
 }

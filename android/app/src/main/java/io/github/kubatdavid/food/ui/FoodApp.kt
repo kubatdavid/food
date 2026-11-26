@@ -9,7 +9,9 @@ import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
+import androidx.compose.material3.SnackbarDuration
 import androidx.compose.material3.SnackbarHostState
+import androidx.compose.material3.SnackbarResult
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -37,6 +39,12 @@ fun FoodApp(vm: FoodViewModel = viewModel()) {
     // Fresh data every time the app comes to the front (other devices may have changed it).
     LifecycleEventEffect(Lifecycle.Event.ON_RESUME) { vm.refresh() }
     LaunchedEffect(Unit) { vm.messages.collect { snackbar.showSnackbar(it) } }
+    LaunchedEffect(Unit) {
+        vm.undoables.collect { u ->
+            val r = snackbar.showSnackbar(u.text, actionLabel = "Vrátit", duration = SnackbarDuration.Long)
+            if (r == SnackbarResult.ActionPerformed) u.undo()
+        }
+    }
 
     Scaffold(
         snackbarHost = { SnackbarHost(snackbar) },

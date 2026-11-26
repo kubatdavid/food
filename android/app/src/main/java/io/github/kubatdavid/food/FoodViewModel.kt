@@ -17,6 +17,9 @@ import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.buildJsonObject
 import kotlinx.serialization.json.put
 
+/** A snackbar message with an undo action. */
+class Undoable(val text: String, val undo: () -> Unit)
+
 /** What the add/edit sheet hands back. */
 data class Draft(
     val name: String,
@@ -39,6 +42,7 @@ class FoodViewModel : ViewModel() {
     private val _refreshing = MutableStateFlow(false)
     private val _error = MutableStateFlow<String?>(null)
     private val _messages = MutableSharedFlow<String>(extraBufferCapacity = 8)
+    private val _undoables = MutableSharedFlow<Undoable>(extraBufferCapacity = 8)
 
     val items: StateFlow<List<PantryItem>> = _items
     val shop: StateFlow<List<ShopItem>> = _shop
@@ -49,6 +53,7 @@ class FoodViewModel : ViewModel() {
     val refreshing: StateFlow<Boolean> = _refreshing
     val error: StateFlow<String?> = _error
     val messages: SharedFlow<String> = _messages
+    val undoables: SharedFlow<Undoable> = _undoables
 
     fun refresh() {
         if (_refreshing.value) return
@@ -128,6 +133,13 @@ class FoodViewModel : ViewModel() {
         val q = maxOf(0.0, Math.round(qty * 100) / 100.0)
         _items.value = _items.value.map { if (it.id == item.id) it.copy(qty = q) else it }   // instant feedback
         write { _items.value = api.patchItem(item.id, buildJsonObject { put("qty", q) }) }
+    }
+
+    /** One tap: the item ran out (qty 0). It stays listed so it can go on the shopping list; the snackbar can undo it. */
+    fun markOut(item: PantryItem) {
+        val before = item.qty
+        setQty(item, 0.0)
+        _undoables.tryEmit(Undoable("Došlo: ${item.name}") { setQty(item, before) })
     }
 
     fun deleteItem(item: PantryItem) = write("Odebráno: ${item.name}") {

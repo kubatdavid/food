@@ -93,7 +93,7 @@ button.ghost:hover:not(:disabled) { color: var(--ink); border-color: var(--line)
 .group-head { display: flex; align-items: baseline; gap: 8px; padding: 0 4px 6px; border-bottom: 1px solid var(--line); }
 .group-head h3 { font-size: 15px; font-weight: 700; }
 .group-head span { color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; }
-.row { display: grid; grid-template-columns: minmax(0, 1fr) auto auto auto; gap: 10px; align-items: center; padding: 8px 4px; border-bottom: 1px solid var(--line); }
+.row { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; gap: 10px; align-items: center; padding: 8px 4px; border-bottom: 1px solid var(--line); }
 .row.out .name { color: var(--muted); text-decoration: line-through; text-decoration-thickness: 1px; }
 .name { font-weight: 500; overflow-wrap: anywhere; }
 .meta { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 2px; }
@@ -105,10 +105,19 @@ button.ghost:hover:not(:disabled) { color: var(--ink); border-color: var(--line)
 .qty button:hover:not(:disabled) { color: var(--accent); }
 .qty input { border: 0; width: 64px; text-align: right; padding: 4px 2px; font-family: var(--font-data); font-size: 14px; font-variant-numeric: tabular-nums; background: transparent; }
 .qty .unit { font-family: var(--font-data); font-size: 13px; color: var(--muted); padding-right: 8px; min-width: 2.2em; }
+.acts { display: inline-flex; gap: 2px; align-items: center; justify-content: flex-end; flex-wrap: wrap; }
+button.ghost.outbtn { color: var(--bad); }
+button.ghost.outbtn:hover:not(:disabled) { color: var(--bad); border-color: var(--bad); }
+.status .undo { margin-left: 8px; padding: 2px 10px; font-size: 13px; }
+/* "Došlo" feedback floats at the bottom so it is visible wherever the list is scrolled */
+.status.toast { position: fixed; left: 50%; bottom: calc(env(safe-area-inset-bottom, 0px) + 16px); transform: translateX(-50%); z-index: 50;
+  margin: 0; padding: 10px 14px; border-radius: 10px; background: var(--ink); color: var(--surface); box-shadow: 0 6px 24px rgba(0,0,0,.25);
+  width: max-content; max-width: calc(100vw - 32px); display: flex; align-items: center; gap: 4px; }
+.status.toast .undo { color: inherit; background: transparent; border: 1px solid currentColor; flex: none; }
 .confirm { display: inline-flex; gap: 4px; align-items: center; font-size: 13px; }
 .confirm button { padding: 4px 8px; font-size: 13px; }
 .confirm .yes { color: var(--bad); border-color: var(--bad); }
-@media (max-width: 560px) { .row { grid-template-columns: minmax(0, 1fr) auto; } .row .qty { grid-column: 1; justify-self: start; } }
+@media (max-width: 560px) { .row { grid-template-columns: minmax(0, 1fr) auto; } .row .acts { grid-column: 2; grid-row: 1; } .row .qty { grid-column: 1 / -1; grid-row: 2; justify-self: start; } }
 .empty { border: 1px dashed var(--line); border-radius: var(--r); padding: 28px 20px; text-align: center; color: var(--muted); margin-top: 14px; }
 .empty h3 { color: var(--ink); font-size: 18px; margin-bottom: 6px; }
 .empty p { margin: 0 auto; max-width: 46ch; }
@@ -288,7 +297,7 @@ button.ghost:hover:not(:disabled) { color: var(--ink); border-color: var(--line)
       search: "Hledat položky", show: "Zobrazit", fAll: "Vše", fSoon: "Spotřebovat brzy", fOut: "Došlo",
       loading: "Načítám spíž…", inStock: "skladem", soonStat: "spotřebovat brzy", outStat: "došlo",
       expired: "Prošlé", today: "Spotřebovat dnes", tomorrow: "Spotřebovat zítra", inDays: "Spotřebovat do {n} dnů", byDate: "Spotřebovat do {date}",
-      runOut: "Došlo", edit: "Upravit", remove: "Odebrat", removeQ: "Odebrat?", keep: "Ponechat",
+      runOut: "Došlo", markOut: "Došlo", markOutAria: "Došlo: {name}", markedOut: "Došlo: {name}. Je teď v Nákupu pod Došlo ve spíži.", undo: "Vrátit", edit: "Upravit", remove: "Odebrat", removeQ: "Odebrat?", keep: "Ponechat",
       less: "Méně: {name}", more: "Více: {name}", amountOf: "Množství: {name}", removeAria: "Odebrat: {name}",
       emptyTitle: "Spíž je prázdná",
       emptyText: "Přidej, co máš doma, pomocí formuláře nahoře: položku, množství a jednotku. Tlačítka Základy předvyplní běžné suroviny. Položky se řadí podle toho, kde je skladuješ.",
@@ -320,7 +329,7 @@ button.ghost:hover:not(:disabled) { color: var(--ink); border-color: var(--line)
       search: "Search items", show: "Show", fAll: "All", fSoon: "Use soon", fOut: "Run out",
       loading: "Loading your pantry…", inStock: "in stock", soonStat: "use soon", outStat: "run out",
       expired: "Expired", today: "Use today", tomorrow: "Use tomorrow", inDays: "Use in {n} days", byDate: "Use by {date}",
-      runOut: "Run out", edit: "Edit", remove: "Remove", removeQ: "Remove?", keep: "Keep",
+      runOut: "Run out", markOut: "Out", markOutAria: "Ran out: {name}", markedOut: "Ran out: {name}. It now shows under Run out in Shopping.", undo: "Undo", edit: "Edit", remove: "Remove", removeQ: "Remove?", keep: "Keep",
       less: "Less {name}", more: "More {name}", amountOf: "Amount of {name}", removeAria: "Remove {name}",
       emptyTitle: "Your pantry is empty",
       emptyText: "Add what you have at home with the form above: item, amount and unit. The Staples buttons fill the form for common basics. Items are grouped by where you keep them.",
@@ -358,15 +367,24 @@ button.ghost:hover:not(:disabled) { color: var(--ink); border-color: var(--line)
   const raw = (n) => { const v = Number(n) || 0; return String(Math.round(v * 100) / 100); };
 
   let items = [], loaded = false, recipeRows = null, recipeErr = null;
-  const ui = { filter: "all", q: "", editingId: null, confirmId: null };
+  const ui = { filter: "all", q: "", editingId: null, confirmId: null, undo: null };   // undo: {id, qty, name} after "Došlo"
   let statusMsg = { key: "loading", vars: {}, err: false };
   let shop = [], shopLoaded = false, shopMsg = null;
 
+  let toastTimer = 0;
   function setStatus(key, vars = {}, isErr = false) {
     statusMsg = key ? { key, vars, err: isErr } : null;
     const s = $("status");
     s.textContent = statusMsg ? t(key, vars) : "";
     s.classList.toggle("err", !!isErr);
+    if (key !== "markedOut") ui.undo = null;
+    const toast = key === "markedOut" && !!ui.undo;
+    s.classList.toggle("toast", toast);
+    clearTimeout(toastTimer);
+    if (toast) {
+      s.insertAdjacentHTML("beforeend", ` <button type="button" class="undo" data-undo="1">${esc(t("undo"))}</button>`);
+      toastTimer = setTimeout(() => { if (statusMsg && statusMsg.key === "markedOut") setStatus(null); }, 8000);
+    }
   }
 
   // ---------- static text ----------
@@ -661,9 +679,10 @@ button.ghost:hover:not(:disabled) { color: var(--ink); border-color: var(--line)
 
   function rowHtml(it) {
     const n = { name: it.name };
-    const actions = ui.confirmId === it.id
-      ? `<span class="confirm">${esc(t("removeQ"))} <button type="button" class="yes" data-act="del-yes">${esc(t("remove"))}</button><button type="button" data-act="del-no">${esc(t("keep"))}</button></span><span></span>`
-      : `<button type="button" class="ghost" data-act="edit">${esc(t("edit"))}</button><button type="button" class="ghost" data-act="del" aria-label="${esc(t("removeAria", n))}">${esc(t("remove"))}</button>`;
+    const outBtn = isOut(it) ? "" : `<button type="button" class="ghost outbtn" data-act="out" aria-label="${esc(t("markOutAria", n))}">${esc(t("markOut"))}</button>`;
+    const actions = `<span class="acts">` + (ui.confirmId === it.id
+      ? `<span class="confirm">${esc(t("removeQ"))} <button type="button" class="yes" data-act="del-yes">${esc(t("remove"))}</button><button type="button" data-act="del-no">${esc(t("keep"))}</button></span>`
+      : `${outBtn}<button type="button" class="ghost" data-act="edit">${esc(t("edit"))}</button><button type="button" class="ghost" data-act="del" aria-label="${esc(t("removeAria", n))}">${esc(t("remove"))}</button>`) + `</span>`;
     return `<div class="row${isOut(it) ? " out" : ""}" data-id="${esc(it.id)}">
       <div><div class="name">${esc(it.name)}</div><div class="meta">${isOut(it) ? `<span class="tag bad">${esc(t("runOut"))}</span>` : ""}${expiryTag(it.expires)}</div></div>
       <span class="qty">
@@ -708,6 +727,10 @@ button.ghost:hover:not(:disabled) { color: var(--ink); border-color: var(--line)
       const next = Math.max(0, Math.round(((Number(it.qty) || 0) + (act === "inc" ? step : -step)) * 100) / 100);
       it.qty = next; renderStats(); const inp = $("q-" + id); if (inp) inp.value = raw(next);
       write("PATCH", { id, body: { qty: next } });
+    } else if (act === "out") {
+      // One click: the item ran out (qty 0). It stays in the list so it can go on the shopping list; Vrátit undoes it.
+      ui.undo = { id, qty: Number(it.qty) || 0, name: it.name };
+      write("PATCH", { id, body: { qty: 0 } }, "markedOut", { name: it.name });
     } else if (act === "edit") {
       ui.editingId = id;
       $("fName").value = it.name; $("fQty").value = raw(it.qty); $("fUnit").value = it.unit;
@@ -726,6 +749,12 @@ button.ghost:hover:not(:disabled) { color: var(--ink); border-color: var(--line)
     const v = Math.max(0, Number(inp.value) || 0);
     if (!it || v === Number(it.qty)) return;
     write("PATCH", { id, body: { qty: v } });
+  });
+
+  $("status").addEventListener("click", (ev) => {
+    if (!ev.target.closest("button[data-undo]") || !ui.undo) return;
+    const u = ui.undo; ui.undo = null;
+    write("PATCH", { id: u.id, body: { qty: u.qty } }, "saved", { name: u.name });
   });
 
   function render() { renderStats(); renderStaples(); renderList(); renderShop(); }
